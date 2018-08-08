@@ -91,7 +91,7 @@ public class MyDispatcherServlet extends HttpServlet {
         String resource = config.getInitParameter("configLocation");
         Properties properties = new Properties();
         try {
-            properties.load(this.getClass().getClassLoader().getResourceAsStream(resource));
+            properties.load(this.getClass().getResourceAsStream(resource));
         } catch (IOException e) {
             e.printStackTrace();
         }
